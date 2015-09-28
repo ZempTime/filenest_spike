@@ -1,0 +1,16 @@
+<h1>Sup</h1>
+
+<div>
+  <%= form_for @drop do |f| %>
+    <%= f.attachment_field :uploads_files, multiple: true %>
+    <%= f.submit "Upload", class: "btn btn-success" %>
+  <% end %>
+</div>
+
+<hr />
+
+<div class="row">
+  <% @uploads.each do |upload| %>
+    <%= attachment_image_tag(upload, :file, :fill, 300, 300)%>
+  <% end %>
+</div>

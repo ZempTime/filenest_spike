@@ -47,12 +47,12 @@ group :development do
 end
 
 source "https://rails-assets.org" do
+  gem 'rails-assets-bootstrap'
   gem "rails-assets-jquery-ui"
-  gem 'rails-assets-zeroclipboard'
 end
 
 gem 'mini_magick', '~> 4.2.7'
-gem 'refile', require: ["refile/rails"], github: "refile/refile", ref: "51760dacd6fbff6990afec37d8f9e38b24615733"
+gem 'refile', require: "refile/rails", git: 'https://github.com/refile/refile.git', branch: 'master'
 gem 'refile-mini_magick', '~> 0.1.0'
 gem 'font-awesome-rails', '~> 4.3.0.0'
 gem 'acts-as-taggable-on', '~> 3.5.0'
