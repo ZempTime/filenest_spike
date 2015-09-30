@@ -1,19 +1,27 @@
-<h1>Sup</h1>
-
-<div>
+<div class="row upload">
   <%= form_for @drop do |f| %>
     <%= f.attachment_field :uploads_files, multiple: true %>
     <%= f.submit "Upload", class: "btn btn-success" %>
   <% end %>
 </div>
 
-<hr />
-
-<%= form_tag drops_path, method: :get do %>
-  <%= text_field_tag :q, nil, placeholder: "Search" %>
-<% end %>
-<hr />
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-2">
+    <%= form_tag drops_path, method: :get do %>
+      <%= text_field_tag :q, nil, placeholder: "Search" %>
+      <%= submit_tag "Search", class: "btn btn-sm btn-default" %>
+    <% end %>
+  <hr />
+  </div>
+</div>
 
 <div class="row">
-  <%= render @uploads %>
+  <div class="col-xs-2">
+    sidnav
+  </div>
+  <div class="col-xs-10">
+    <div class="row">
+      <%= render @uploads %>
+    </div>
+  </div>
 </div>
