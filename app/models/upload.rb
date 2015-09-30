@@ -1,7 +1,17 @@
 class Upload < ActiveRecord::Base
+  acts_as_taggable
   belongs_to :drop
   attachment :file
   searchkick
+
+  def search_data
+    {
+      filename: file_filename,
+      filetype: file_content_type,
+      tag_list: tag_list
+
+    }
+  end
 
   def image?
     !!(file_content_type =~ /image/i)

@@ -17,3 +17,6 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+
+// Spandex: it's a privilege, not a right.
