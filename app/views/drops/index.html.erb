@@ -9,8 +9,11 @@
 
 <hr />
 
+<%= form_tag drops_path, method: :get do %>
+  <%= text_field_tag :q, nil, placeholder: "Search" %>
+<% end %>
+<hr />
+
 <div class="row">
-  <% @uploads.each do |upload| %>
-    <%= attachment_image_tag(upload, :file, :fill, 300, 300)%>
-  <% end %>
+  <%= render @uploads %>
 </div>

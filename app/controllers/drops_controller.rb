@@ -1,7 +1,9 @@
 class DropsController < ApplicationController
   def index
+    query = params[:q].presence || "*"
+    @uploads = Upload.search(query)
+
     @drop = Drop.freshest
-    @uploads = Upload.all
   end
 
   def update

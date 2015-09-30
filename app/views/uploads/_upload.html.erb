@@ -1,0 +1,11 @@
+<div class="col-xs-6 col-md-3" >
+  <div class="thumbnail image-thumbnail">
+    <% if upload.image? %>
+      <%= attachment_image_tag(upload, :file, :fill, 300, 300)%>
+    <% elsif upload.text? %>
+      <%= upload.display_text %>
+    <% elsif upload.video? %>
+      <%= video_tag upload.file_url, size: "300x300" %>
+    <% end %>
+  </div>
+</div>
