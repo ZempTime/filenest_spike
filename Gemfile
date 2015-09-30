@@ -47,9 +47,11 @@ group :development do
 end
 
 source "https://rails-assets.org" do
-  gem 'rails-assets-bootstrap'
   gem "rails-assets-jquery-ui"
+  gem 'rails-assets-tether', '>= 1.1.0'
 end
+
+gem 'bootstrap', git: 'https://github.com/twbs/bootstrap-rubygem'
 
 gem 'mini_magick', '~> 4.2.7'
 gem 'refile', require: "refile/rails", git: 'https://github.com/refile/refile.git', branch: 'master'
