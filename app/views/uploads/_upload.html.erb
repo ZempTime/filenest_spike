@@ -1,7 +1,10 @@
 <div class="col-sm-4">
   <div class="card result">
+      <div class="card-header">
+        <%= check_box_tag "upload", upload.id %>
+      <span class="card-title text-center bold"><%= upload.file_filename %></span>
+      </div>
     <div class="card-block">
-      <h4 class="card-title text-center"><%= upload.file_filename %></h4>
       <% if upload.image? %>
         <%= attachment_image_tag(upload, :file, :fill, 300, 300)%>
       <% elsif upload.text? %>
