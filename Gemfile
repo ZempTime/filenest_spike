@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.0.3.5'
+gem 'rails', '7.1.5.2'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.3.20'
 # Use SCSS for stylesheets
@@ -59,7 +59,7 @@ gem 'refile-mini_magick', '~> 0.1.0'
 gem 'font-awesome-rails', '~> 4.7.0.5'
 gem 'acts-as-taggable-on', '~> 4.0.0'
 gem 'select2-rails', git: 'https://github.com/frodrigo/select2-rails.git', branch: 'v4'
-gem 'acts_as_list', '~> 0.7.2'
+gem 'acts_as_list', '~> 0.7.4'
 gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 
