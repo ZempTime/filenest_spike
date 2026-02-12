@@ -63,4 +63,4 @@ gem 'acts_as_list', '~> 0.7.2'
 gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 
-gem 'searchkick', '~> 0.9.1'
+gem 'searchkick', '~> 1.0.0'
